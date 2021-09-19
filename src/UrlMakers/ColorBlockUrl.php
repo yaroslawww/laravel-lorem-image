@@ -76,7 +76,7 @@ class ColorBlockUrl implements LimsumUrlMaker
             throw new \InvalidArgumentException("Extension [{$this->extension}] not allowed.");
         }
 
-        $url = route(config('lorem-image.url.name_prefix') . '.color-block', $this->routeParams(is_array($params) ? $params : []));
+        $url = route(config('lorem-image.route.name_prefix') . '.color-block', $this->routeParams(is_array($params) ? $params : []));
 
         if ($reset) {
             $this->reset();

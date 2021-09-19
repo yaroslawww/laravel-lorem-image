@@ -54,16 +54,9 @@ class LipsumManager
      */
     public function routes(?string $prefix = null, ?string $namePrefix = null): void
     {
-        if ($prefix) {
-            $this->app['config']['lorem-image.url.prefix'] = $prefix;
-        } else {
-            $prefix = $this->app['config']['lorem-image.url.prefix'];
-        }
-        if ($namePrefix) {
-            $this->app['config']['lorem-image.url.name_prefix'] = $prefix;
-        } else {
-            $namePrefix = $this->app['config']['lorem-image.url.name_prefix'];
-        }
+        $prefix     = $prefix     ?? $this->app['config']['lorem-image.route.prefix'];
+        $namePrefix = $namePrefix ?? $this->app['config']['lorem-image.route.name_prefix'];
+
         Route::prefix($prefix)
              ->as("{$namePrefix}.")
              ->where([
