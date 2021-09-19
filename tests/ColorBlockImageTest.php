@@ -35,31 +35,40 @@ class ColorBlockImageTest extends TestCase
     public function png_image()
     {
         $url = Limsum::driver('color-block')->url([
-            'width'      => 50,
-            'height'     => 25,
-            'color'      => '#202020',
-            'extension'  => 'png',
+            'width'     => 50,
+            'height'    => 25,
+            'color'     => '#202020',
+            'extension' => 'png',
         ]);
 
         $response = $this->get($url);
 
-        $response->assertHeader('Content-Type', 'image/png');
-        $this->assertStringContainsString('PNG', $response->content());
+        if (function_exists('imagepng')) {
+            $response->assertStatus(200);
+            $response->assertHeader('Content-Type', 'image/png');
+            $this->assertStringContainsString('PNG', $response->content());
+        } else {
+            $response->assertStatus(500);
+        }
     }
 
     /** @test */
     public function jpg_image()
     {
         $url = Limsum::driver('color-block')->url([
-            'width'      => 50,
-            'height'     => 25,
-            'color'      => '#202020',
-            'extension'  => 'jpg',
+            'width'     => 50,
+            'height'    => 25,
+            'color'     => '#202020',
+            'extension' => 'jpg',
         ]);
 
         $response = $this->get($url);
 
-        $response->assertStatus(200);
-        $response->assertHeader('Content-Type', 'image/jpeg');
+        if (function_exists('imagejpeg')) {
+            $response->assertStatus(200);
+            $response->assertHeader('Content-Type', 'image/jpeg');
+        } else {
+            $response->assertStatus(500);
+        }
     }
 }
