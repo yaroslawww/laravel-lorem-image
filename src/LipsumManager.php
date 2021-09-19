@@ -96,7 +96,7 @@ class LipsumManager
         $config = $this->getConfig($name) ?? [];
 
         if (isset($this->customCreators[ $name ])) {
-            return $this->callCustomCreator($config);
+            return $this->customCreators[ $name ]($config);
         }
 
         $driverMethod = 'create' . ucfirst(Str::camel($name)) . 'Driver';
@@ -126,18 +126,6 @@ class LipsumManager
     protected function createLoremPicsumDriver(array $config = []): LimsumUrlMaker
     {
         return new LoremPicsumUrl($config);
-    }
-
-    /**
-     * Call a custom driver creator.
-     *
-     * @param array $config
-     *
-     * @return LimsumUrlMaker
-     */
-    protected function callCustomCreator(array $config): LimsumUrlMaker
-    {
-        return $this->customCreators[$config['driver']]($this->app, $config);
     }
 
     /**
@@ -190,7 +178,7 @@ class LipsumManager
      */
     public function setDefaultDriver(string $name): static
     {
-        $this->app['config']['broadcasting.default'] = $name;
+        $this->app['config']['lorem-image.default.driver'] = $name;
 
         return $this;
     }

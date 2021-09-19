@@ -117,9 +117,7 @@ class ColorBlockUrl implements LimsumUrlMaker
      */
     public function black(): static
     {
-        $this->color = '#000000';
-
-        return $this;
+        return $this->color('#000000');
     }
 
     /**
@@ -127,9 +125,7 @@ class ColorBlockUrl implements LimsumUrlMaker
      */
     public function white(): static
     {
-        $this->color = '#FFFFFF';
-
-        return $this;
+        return $this->color('#FFFFFF');
     }
 
     /**
@@ -137,9 +133,7 @@ class ColorBlockUrl implements LimsumUrlMaker
      */
     public function svg(): static
     {
-        $this->extension(__FUNCTION__);
-
-        return $this;
+        return $this->extension(__FUNCTION__);
     }
 
     /**
@@ -147,9 +141,7 @@ class ColorBlockUrl implements LimsumUrlMaker
      */
     public function png(): static
     {
-        $this->extension(__FUNCTION__);
-
-        return $this;
+        return $this->extension(__FUNCTION__);
     }
 
     /**
@@ -157,9 +149,7 @@ class ColorBlockUrl implements LimsumUrlMaker
      */
     public function jpg(): static
     {
-        $this->extension(__FUNCTION__);
-
-        return $this;
+        return $this->extension(__FUNCTION__);
     }
 
     /**

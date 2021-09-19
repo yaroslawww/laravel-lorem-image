@@ -185,9 +185,7 @@ class LoremPicsumUrl implements LimsumUrlMaker
      */
     public function jpg(): static
     {
-        $this->extension(__FUNCTION__);
-
-        return $this;
+        return $this->extension(__FUNCTION__);
     }
 
     /**
@@ -195,9 +193,7 @@ class LoremPicsumUrl implements LimsumUrlMaker
      */
     public function webp(): static
     {
-        $this->extension(__FUNCTION__);
-
-        return $this;
+        return $this->extension(__FUNCTION__);
     }
 
     /**
