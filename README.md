@@ -1,3 +1,7 @@
+[![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/build.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/?branch=master)
+
 # Laravel lorem image url generator.
 
 Generates a configured preview image.
