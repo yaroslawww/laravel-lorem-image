@@ -7,8 +7,7 @@ build:
       environment:
         php:
           version: 8.0
-          pecl_extensions:
-            - gd
+          compile_options: '--enable-gd'
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
