@@ -23,6 +23,8 @@ class ColorBlockPng extends AbstractColorBlockImage
         $imageData = ob_get_contents();
         ob_end_clean();
 
+        imagedestroy($image);
+
         return Response::make($imageData, 200, [
             'Content-Type' => $this->mimeType(),
         ]);
