@@ -12,11 +12,11 @@ class ColorBlockPng extends AbstractColorBlockImage
             throw new \Exception('FG extension not loaded.');
         }
 
-        $image = imagecreatetruecolor($this->with, $this->height);
+        $image = imagecreatetruecolor((int) $this->with, (int) $this->height);
 
         $color = $this->hexColorAllocate($image, $this->color);
 
-        imagefilledrectangle($image, 0, 0, $this->with, $this->height, $color);
+        imagefilledrectangle($image, 0, 0, (int) $this->with, (int) $this->height, $color);
 
         ob_start();
         $this->makeImage($image);
@@ -37,9 +37,9 @@ class ColorBlockPng extends AbstractColorBlockImage
     protected function hexColorAllocate($image, $hex): bool|int
     {
         $hex = ltrim($hex, '#');
-        $r   = hexdec(substr($hex, 0, 2));
-        $g   = hexdec(substr($hex, 2, 2));
-        $b   = hexdec(substr($hex, 4, 2));
+        $r   = (int) hexdec(substr($hex, 0, 2));
+        $g   = (int) hexdec(substr($hex, 2, 2));
+        $b   = (int) hexdec(substr($hex, 4, 2));
 
         return imagecolorallocate($image, $r, $g, $b);
     }
