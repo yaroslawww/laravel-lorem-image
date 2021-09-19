@@ -6,8 +6,8 @@ build:
     tests-with-coverage:
       environment:
         php:
-          version: 8.0
-          compile_options: '--enable-gd'
+          version: 8.0.1
+          compile_options: '--with-config-file-path=/home/scrutinizer/.phpenv/versions/8.0.1/etc --with-config-file-scan-dir=/home/scrutinizer/.phpenv/versions/8.0.1/etc/conf.d --prefix=/home/scrutinizer/.phpenv/versions/8.0.1 --libexecdir=/home/scrutinizer/.phpenv/versions/8.0.1/libexec --enable-intl --with-openssl --enable-gd --enable-exif --with-libzip --with-zlib --with-sodium --with-pdo-sqlite --enable-soap --enable-xmlreader --with-xsl --enable-ftp --with-tidy --with-xmlrpc --enable-sysvsem --enable-sysvshm --enable-sysvmsg --enable-shmop --with-mysqli=mysqlnd --with-pdo-mysql=mysqlnd --enable-pcntl --with-readline --enable-mbstring --with-curl --with-pgsql --with-pdo-pgsql --with-gettext --enable-sockets --with-bz2 --enable-bcmath --enable-calendar --with-libdir=lib --enable-fpm --enable-maintainer-zts --with-gmp --with-kerberos --with-imap --with-imap-ssl --with-apxs2=/usr/bin/apxs --with-ldap --with-pear=/home/scrutinizer/.phpenv/versions/8.0.1/pear'
       tests:
         override:
           - command: vendor/bin/phpunit --coverage-clover=coverage-file
