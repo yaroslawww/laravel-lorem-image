@@ -1,4 +1,5 @@
 # Laravel lorem image url generator.
+![Packagist License](https://img.shields.io/packagist/l/yaroslawww/laravel-lorem-image?color=%234dc71f)
 [![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/build.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-lorem-image/?branch=master)
