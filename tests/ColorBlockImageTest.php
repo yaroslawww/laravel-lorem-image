@@ -59,8 +59,7 @@ class ColorBlockImageTest extends TestCase
 
         $response = $this->get($url);
 
-        var_dump($response->content());
-        var_dump($response->headers->all());
+        $response->assertStatus(200);
         $response->assertHeader('Content-Type', 'image/jpeg');
     }
 }
