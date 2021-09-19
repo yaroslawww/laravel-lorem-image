@@ -15,6 +15,7 @@ build:
             coverage:
               file: coverage-file
               format: php-clover
+          - php-scrutinizer-run
 
 checks:
   php:
