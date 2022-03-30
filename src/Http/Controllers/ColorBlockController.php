@@ -24,22 +24,22 @@ class ColorBlockController extends LimsumController
     public static string $colorParameterName = 'c';
 
     /**
-     * @param string $extension
-     * @param Request $request
+     * @param  string  $extension
+     * @param  Request  $request
      *
      * @return mixed
      */
     public function __invoke(string $extension, Request $request)
     {
-        if (!in_array($extension, config('lorem-image.drivers.color-block.extensions', []))) {
+        if (! in_array($extension, config('lorem-image.drivers.color-block.extensions', []))) {
             abort(404);
         }
 
         return (new ColorBlockMaker(
             $extension,
-            $request->get(static::$withParameterName, 100),
-            $request->get(static::$heightParameterName, 100),
-            $request->get(static::$colorParameterName, '#808080'),
+            $request->get(static::$withParameterName, 100) ?? 100,
+            $request->get(static::$heightParameterName, 100) ?? 100,
+            $request->get(static::$colorParameterName, '#808080') ?: '#808080',
         ))->image();
     }
 }
