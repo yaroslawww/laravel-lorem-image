@@ -93,10 +93,10 @@ class ColorBlockUrl implements LimsumUrlMaker
     protected function routeParams(array $params = []): array
     {
         return [
-            'extension'                                => $params['extension'] ?? $this->extension,
-            ColorBlockController::$withParameterName   => $params['width'] ?? $this->width,
-            ColorBlockController::$heightParameterName => $params['height'] ?? $this->height,
-            ColorBlockController::$colorParameterName  => $params['color'] ?? $this->color,
+            'extension'                                 => $params['extension'] ?? $this->extension,
+            ColorBlockController::$widthParameterName   => $params['width']     ?? $this->width,
+            ColorBlockController::$heightParameterName  => $params['height']    ?? $this->height,
+            ColorBlockController::$colorParameterName   => $params['color']     ?? $this->color,
         ];
     }
 

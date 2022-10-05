@@ -4,7 +4,6 @@ namespace Limsum\Contracts;
 
 interface LimsumUrlMaker
 {
-
     /**
      * Generate url.
      *

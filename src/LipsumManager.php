@@ -14,7 +14,6 @@ use Limsum\UrlMakers\LoremPicsumUrl;
 
 class LipsumManager
 {
-
     /**
      * The application instance.
      *

@@ -6,7 +6,6 @@ use Illuminate\Http\Response;
 
 abstract class AbstractColorBlockImage
 {
-
     /**
      * @var float
      */

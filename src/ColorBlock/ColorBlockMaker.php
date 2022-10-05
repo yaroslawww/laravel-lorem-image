@@ -4,7 +4,6 @@ namespace Limsum\ColorBlock;
 
 class ColorBlockMaker
 {
-
     /**
      * @var string
      */

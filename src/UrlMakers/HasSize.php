@@ -4,7 +4,6 @@ namespace Limsum\UrlMakers;
 
 trait HasSize
 {
-
     /**
      * Image width.
      *

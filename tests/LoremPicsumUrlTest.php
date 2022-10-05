@@ -6,7 +6,6 @@ use Limsum\Facades\Limsum;
 
 class LoremPicsumUrlTest extends TestCase
 {
-
     /** @test */
     public function can_change_extension()
     {
